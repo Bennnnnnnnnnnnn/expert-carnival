@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<!--
+    Solid State by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>New Builds</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <!-- Add this to the head section -->
+        <style>
+            /* Full-size image modal styles */
+            .modal {
+              display: none;
+              position: fixed;
+              z-index: 1000;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.9);
+              overflow: auto;
+              justify-content: center;
+              align-items: center;
+            }
+            
+            .modal-content {
+              max-width: 90%;
+              max-height: 90%;
+              margin: auto;
+              display: block;
+              object-fit: contain;
+            }
+            
+            .close-modal {
+                position: absolute;
+                top: 100px;
+                right: 30px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 2000; /* Ensure it's above everything */
+                background-color: rgba(0,0,0,0.5); /* Add background for visibility */
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                }
+                        
+            /* Navigation arrows for modal */
+            .modal-nav {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 0 30px;
+            }
+            
+            .modal-arrow {
+              background: rgba(0,0,0,0.5);
+              color: white;
+              border: none;
+              padding: 15px;
+              font-size: 24px;
+              cursor: pointer;
+              border-radius: 50%;
+              transition: background 0.3s;
+            }
+            
+            .modal-arrow:hover {
+              background: rgba(0,0,0,0.8);
+            }
+        </style>
+    </head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">New Builds</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="Form.html">Start a build</a></li>
+								<li><a href="NewBuilds.html">New Builds</a></li>
+								<li><a href="Extensions.html">Extensions</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><img src="images/justlogo.jpg" alt="Logo"></div>
+							<h2>These are our new builds</h2>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">					
+
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Our new Builds</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<section class="features">
+                                        <article>
+                                          <div class="image-container" style="position: relative;">
+                                            <a class="image">
+                                              <img src="images/Aureum1.JPG" alt="" class="project-image" data-project="aureum" data-index="0" />
+                                            </a>
+                                            <div class="image-nav" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; align-items: center; pointer-events: none;">
+                                              <button class="nav-arrow prev" onclick="changeImage('aureum', -1)" style="background: rgba(0,0,0,0.5); border: none; color: white; padding: 10px; cursor: pointer; pointer-events: auto;"><i class="fas fa-chevron-left"></i></button>
+                                              <button class="nav-arrow next" onclick="changeImage('aureum', 1)" style="background: rgba(0,0,0,0.5); border: none; color: white; padding: 10px; cursor: pointer; pointer-events: auto;"><i class="fas fa-chevron-right"></i></button>
+                                            </div>
+                                          </div>
+                                          <h3 class="major">Aureum</h3>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                                          <a href="#" class="special">See more</a>
+                                        </article>
+                                        
+                                        <!-- Repeat for other projects -->
+                                        <article>
+                                          <div class="image-container" style="position: relative;">
+                                            <a class="image">
+                                              <img src="images/Currawong2.jpg" alt="" class="project-image" data-project="currawong" data-index="0" />
+                                            </a>
+                                            <div class="image-nav" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; align-items: center; pointer-events: none;">
+                                              <button class="nav-arrow prev" onclick="changeImage('currawong', -1)" style="background: rgba(0,0,0,0.5); border: none; color: white; padding: 10px; cursor: pointer; pointer-events: auto;"><i class="fas fa-chevron-left"></i></button>
+                                              <button class="nav-arrow next" onclick="changeImage('currawong', 1)" style="background: rgba(0,0,0,0.5); border: none; color: white; padding: 10px; cursor: pointer; pointer-events: auto;"><i class="fas fa-chevron-right"></i></button>
+                                            </div>
+                                          </div>
+                                          <h3 class="major">Currawong</h3>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                                          <a href="#" class="special">See more</a>
+                                        </article>
+                                        
+                                        <!-- And for the third project -->
+                                        <article>
+                                          <div class="image-container" style="position: relative;">
+                                            <a class="image">
+                                              <img src="images/Beauty Point 1.jpg" alt="" class="project-image" data-project="beautypoint" data-index="0" />
+                                            </a>
+                                            <div class="image-nav" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; align-items: center; pointer-events: none;">
+                                              <button class="nav-arrow prev" onclick="changeImage('beautypoint', -1)" style="background: rgba(0,0,0,0.5); border: none; color: white; padding: 10px; cursor: pointer; pointer-events: auto;"><i class="fas fa-chevron-left"></i></button>
+                                              <button class="nav-arrow next" onclick="changeImage('beautypoint', 1)" style="background: rgba(0,0,0,0.5); border: none; color: white; padding: 10px; cursor: pointer; pointer-events: auto;"><i class="fas fa-chevron-right"></i></button>
+                                            </div>
+                                          </div>
+                                          <h3 class="major">Beauty Point</h3>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                                          <a href="#" class="special">See more</a>
+                                        </article>
+                                      </section>
+									
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+                    <div id="imageModal" class="modal">
+                        <!-- Add inline onclick handler directly, with debugging alert -->
+                        <span class="close-modal" ; closeModal(); return false;">&times;</span>
+                        <img class="modal-content" id="fullSizeImage">
+                        <div class="modal-nav">
+                            <button class="modal-arrow" id="prevModalImage">&larr;</button>
+                            <button class="modal-arrow" id="nextModalImage">&rarr;</button>
+                        </div>
+                    </div>
+
+			</div>
+
+        
+        <!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- Image gallery and modal functionality -->
+<script>
+  // Image arrays for each project
+  const projectImages = {
+    'aureum': [
+      'images/Aureum1.JPG',
+      'images/Aureum2.jpg',
+      'images/Aureum3.jpg',
+        'images/Aureum4.jpg',
+        'images/Aureum5.jpg',
+        'images/Aureum6.jpg',
+        'images/Aureum7.jpg',
+        'images/Aureum8.jpg'
+    ],
+    'currawong': [
+      'images/Currawong2.jpg',
+      'images/Currawong4.jpg',
+      'images/Currawong3.jpg'
+    ],
+    'beautypoint': [
+      'images/Beauty Point 1.jpg',
+      'images/Beauty Point 2.jpg',
+      'images/Beauty Point3.jpg',
+        'images/Beauty Point4.jpg'
+    ]
+  };
+
+  // Current index for each project
+  const currentIndex = {
+    'aureum': 0,
+    'currawong': 0,
+    'beautypoint': 0
+  };
+
+  // Function to change the thumbnail image
+  function changeImage(project, direction) {
+    // Get the current index
+    let index = currentIndex[project];
+    
+    // Update the index
+    index += direction;
+    
+    // Handle wrap-around
+    const imageCount = projectImages[project].length;
+    if (index < 0) index = imageCount - 1;
+    if (index >= imageCount) index = 0;
+    
+    // Save the new index
+    currentIndex[project] = index;
+    
+    // Update the image
+    const imageElement = document.querySelector(`.project-image[data-project="${project}"]`);
+    imageElement.src = projectImages[project][index];
+    imageElement.setAttribute('data-index', index);
+  }
+  
+  // Keep track of which project is currently being viewed in modal
+  let currentModalProject = '';
+  
+  // Function to change the modal image
+  function changeModalImage(direction) {
+    if (!currentModalProject) return;
+    
+    // Get the current index
+    let index = currentIndex[currentModalProject];
+    
+    // Update the index
+    index += direction;
+    
+    // Handle wrap-around
+    const imageCount = projectImages[currentModalProject].length;
+    if (index < 0) index = imageCount - 1;
+    if (index >= imageCount) index = 0;
+    
+    // Save the new index
+    currentIndex[currentModalProject] = index;
+    
+    // Update the modal image
+    document.getElementById('fullSizeImage').src = projectImages[currentModalProject][index];
+    
+    // Also update the thumbnail
+    const imageElement = document.querySelector(`.project-image[data-project="${currentModalProject}"]`);
+    imageElement.src = projectImages[currentModalProject][index];
+    imageElement.setAttribute('data-index', index);
+  }
+  
+  // Function to open the modal
+  function openModal(project, index) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('fullSizeImage');
+    
+    // Set the image source
+    modalImg.src = projectImages[project][index];
+    
+    // Remember which project we're viewing
+    currentModalProject = project;
+    currentIndex[project] = index;
+    
+    // Display the modal
+    modal.style.display = 'flex';
+    
+    // Add keyboard navigation
+    document.addEventListener('keydown', handleKeyDown);
+  }
+  
+  // Function to close the modal
+  function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+    document.removeEventListener('keydown', handleKeyDown);
+  }
+  
+  // Keyboard navigation
+  function handleKeyDown(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+    } else if (e.key === 'ArrowLeft') {
+      changeModalImage(-1);
+    } else if (e.key === 'ArrowRight') {
+      changeModalImage(1);
+    }
+  }
+  
+  // Wait for the DOM to be fully loaded before adding event listeners
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add click events to all project images
+    document.querySelectorAll('.project-image').forEach(img => {
+      img.addEventListener('click', function() {
+        const project = this.getAttribute('data-project');
+        const index = parseInt(this.getAttribute('data-index'));
+        openModal(project, index);
+      });
+      // Make the cursor show it's clickable
+      img.style.cursor = 'pointer';
+    });
+    
+    // Set up navigation button events
+    document.getElementById('prevModalImage').addEventListener('click', function() {
+      changeModalImage(-1);
+    });
+    
+    document.getElementById('nextModalImage').addEventListener('click', function() {
+      changeModalImage(1);
+    });
+    
+    // Set up close button event
+    document.querySelector('.close-modal').addEventListener('click', function(e) {
+      e.stopPropagation();
+      closeModal();
+    });
+    
+    // Close modal when clicking the background
+    document.getElementById('imageModal').addEventListener('click', function(event) {
+      if (event.target === this) {
+        closeModal();
+      }
+    });
+  });
+</script>    
+
+	</body>
+</html>

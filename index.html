@@ -11,6 +11,67 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			
+			/* Make the image background visible through all layers */
+			.image-background {
+				position: absolute;
+				top: -6.5em; /* Keep this to maintain the current vertical positioning */
+				left: 0;
+				right: 0;
+				bottom: -6.5em; /* Keep this as you mentioned the bottom is perfect */
+				background-image: url('images/About us section.jpg');
+				background-size: cover;
+				background-position: center;
+				z-index: -10;
+				/* Reverse the diagonal direction at the top */
+				clip-path: polygon(
+					0 0,         /* Top-left point (start of diagonal) */
+					100% 6.5em,  /* Top-right point (after diagonal) */
+					100% 100%,   /* Bottom-right corner */
+					0 100%       /* Bottom-left corner */
+				);
+				padding: 0 !important;
+        		margin: 0 !important;
+			}
+			
+			/* Make the section transparent */
+			.image-section {
+				background-color: transparent !important;
+				position: relative;
+				padding: 0 !important;
+        		margin: 0 !important;
+			}
+			
+			/* Override the SVG background images with semi-transparent versions */
+			.image-section:before {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 100,100 0,100' style='fill:rgba(0,0,0,0.3)' /%3E%3C/svg%3E") !important;
+				background-color: transparent !important;
+				z-index: -5; /* Changed from -1 to -5 */
+				padding: 0 !important;
+        		margin: 0 !important;
+			}
+			
+			.image-section:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='100,0 100,100 0,100' style='fill:rgba(0,0,0,0)' /%3E%3C/svg%3E") !important;
+				background-color: transparent !important;
+				z-index: -5; /* Changed from -1 to -5 */
+				padding: 0 !important;
+        		margin: 0 !important;
+			}
+			
+			#two.image-section:after {
+    		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 100,100 0,100' style='fill:rgba(0,0,0,0.6)' /%3E%3C/svg%3E") !important;
+			}
+
+			#two.image-section:before {
+    		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 100,100 0,100' style='fill:rgba(0,0,0,0.43)' /%3E%3C/svg%3E") !important;
+			}
+
+			
+
+			
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -32,6 +93,8 @@
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="Form.html">Start a build</a></li>
+								<li><a href="NewBuilds.html">New Builds</a></li>
+								<li><a href="Extensions.html">Extensions</a></li>
 								
 							</ul>
 							<a href="#" class="close">Close</a>
@@ -50,43 +113,67 @@
 				<!-- Wrapper -->
 					<section id="wrapper">
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Magna arcu feugiat</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
+						<section id="one" class="wrapper style1 image-section">
+							<!-- Add the image background div -->
+							<div class="image-background"></div>
+							
+							<!-- Full width dark overlay -->
+							<div style="position: relative; width: 100%; background-color: rgba(0, 0, 0, 0.3); z-index: 1; padding: 4em 0;">
+								<!-- Center the content inside the dark overlay -->
+								<div class="inner" style="max-width: 80%; margin: 0 auto;">
+									<h2 class="major" style="color: #ffffff; text-align: center;">About Us</h2>
+									<p style="color: #ffffff; text-align: justify;">Welcome to Pure Design and Build! Here at "Pure" we specialise in transforming 
+										your vision into reality with expert craftsmanship, attention to detail, and 
+										unwavering commitment to quality. Whether you're building your dream home, or 
+										embarking on a renovation project, our team is dedicated to delivering 
+										exceptional results every step of the way. 
+										<br><br>
+										Founded by Jake Harris, a fully qualified carpenter with more than 15 years of 
+										experience in the building industry, in both Tasmania and Queensland. Jake has 
+										worked on many unique and expertly designed projects, developing a particular 
+										interest in sustainable and healthy homes. At Pure Design and Build we 
+										understand that each project is unique. Throughout your build we work closely 
+										with you to ensure that your needs are met, timelines are adhered to, and your 
+										expectations are exceeded.</p>
 								</div>
-							</section>
+							</div>
+						</section>
 
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Tempus adipiscing</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
+						<!-- ...existing code... -->
+
+                        <!-- Two -->
+						<section id="two" class="wrapper style1 image-section">
+							<!-- Add the image background div -->
+							<div class="image-background" style="background-image: url('images/Aureum1.JPG');"></div>
+							
+							<!-- Full width dark overlay -->
+							<div style="position: relative; width: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 1; padding: 4em 0;">
+								<!-- Center the content inside the dark overlay -->
+								<div class="inner" style="max-width: 80%; margin: 0 auto;">
+									<h2 class="major" style="color: #ffffff; text-align: center;">Portfolio</h2>
+									<p style="color: #ffffff; text-align: justify;">Pure Design and build have completed many remarkable projects, showcasing our commitment to quality craftsmanship and innovative design. Our portfolio represents a diverse range of homes and renovations, each reflecting our dedication to excellence and our clients' unique visions.</p>
+									<a href="NewBuilds.html" class="special" style="display: block; text-align: center; margin-top: 1.5em;">View New Builds</a>
+									<a href="Extensions.html" class="special" style="display: block; text-align: center; margin-top: 1.5em;">View Extensions</a>
 								</div>
-							</section>
+							</div>
+						</section>
+
+<!-- ...existing code... -->
 
 						<!-- Three -->
 							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Nullam dignissim</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
+								<div class="inner">									
+									<section id="three" class="wrapper spotlight style3">
+										<div class="inner">
+											<a href="Form.html" style="display: block; text-decoration: none; text-align: center;">
+												<h2 class="major" style="transition: color 0.3s ease; cursor: pointer;">Click here and start your great Tasmanian build today</h2>
+											</a>
+										</div>
+									</section>							
 								</div>
 							</section>
 
-					<!-- lets get started -->
+					<!-- lets get started 
 						<section id="banner">
 							<div class="inner">
 								<h2 class="major">Lets Get Started</h2>
@@ -95,13 +182,13 @@
 									<li><a href="form.html" class="button special">Start a build</a></li>
 								</ul>
 							</div>
-						</section>
+						</section> -->
 
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<p></p>
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
