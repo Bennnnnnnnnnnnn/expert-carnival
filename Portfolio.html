@@ -1,0 +1,597 @@
+<!DOCTYPE HTML>
+<!--
+    Solid State by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Portfolio - Pure Design and Build</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <!-- Add this to the head section -->
+        <style>
+            /* Logo styling improvements */
+            .logo {
+                margin-bottom: 2em !important;
+            }
+            
+            .logo img {
+                max-width: 150px !important;
+                height: auto !important;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 10px;
+                backdrop-filter: blur(5px);
+            }
+            
+            .logo img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 6px 20px rgba(155, 241, 255, 0.4);
+            }
+
+            /* Full-size image modal styles */
+            .modal {
+              display: none;
+              position: fixed;
+              z-index: 1000;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.9);
+              overflow: auto;
+              justify-content: center;
+              align-items: center;
+            }
+            
+            .modal-content {
+              max-width: 90%;
+              max-height: 90%;
+              margin: auto;
+              display: block;
+              object-fit: contain;
+            }
+            
+            .close-modal {
+                position: absolute;
+                top: 100px;
+                right: 30px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 2000;
+                background-color: rgba(0,0,0,0.5);
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                }
+                        
+            /* Navigation arrows for modal */
+            .modal-nav {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 0 30px;
+            }
+            
+            .modal-arrow {
+              background: rgba(0,0,0,0.5);
+              color: white;
+              border: none;
+              padding: 15px;
+              font-size: 24px;
+              cursor: pointer;
+              border-radius: 50%;
+              transition: background 0.3s;
+            }
+            
+            .modal-arrow:hover {
+              background: rgba(0,0,0,0.8);
+            }
+
+            /* Portfolio section styles */
+            .portfolio-section {
+                margin: 4em 0;
+            }
+
+            .project-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2em;
+                margin-top: 2em;
+            }
+
+            .project-card {
+                background: rgba(255,255,255,0.05);
+                border-radius: 5px;
+                overflow: hidden;
+                transition: transform 0.3s ease;
+            }
+
+            .project-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .project-image {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+
+            .project-image:hover {
+                transform: scale(1.05);
+            }
+
+            .project-info {
+                padding: 1.5em;
+            }
+
+            .project-title {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-bottom: 0.5em;
+                color: #9bf1ff;
+            }
+
+            .project-description {
+                color: #ffffff;
+                line-height: 1.6;
+            }
+
+            .navigation-arrows {
+                display: flex;
+                justify-content: center;
+                gap: 1em;
+                margin-top: 1em;
+            }
+
+            .nav-button {
+                background: rgba(155, 241, 255, 0.2);
+                border: 1px solid #9bf1ff;
+                color: #9bf1ff;
+                padding: 0.5em 1em;
+                cursor: pointer;
+                border-radius: 3px;
+                transition: all 0.3s ease;
+            }
+
+            .nav-button:hover {
+                background: #9bf1ff;
+                color: #000;
+            }
+        </style>
+    </head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Portfolio - Pure Design and Build</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="AboutUs.html">About Us</a></li>
+								<li><a href="Portfolio.html">Portfolio</a></li>
+								<li><a href="Form.html">Inquiries</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><img src="images/ActualLogo.jpg" alt="Pure Design and Build Logo"></div>
+							<h2>Our Portfolio</h2>
+							<p>Showcasing our commitment to quality craftsmanship and innovative design</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">					
+
+						<!-- New Builds Section -->
+						<section class="wrapper style1 portfolio-section">
+							<div class="inner">
+								<h2 class="major">New Builds</h2>
+								<p>Custom homes built from the ground up, each reflecting our commitment to quality and our clients' unique visions.</p>
+								
+								<div class="project-grid">
+									<!-- Aureum Project -->
+									<div class="project-card">
+										<img src="images/Aureum1.JPG" alt="Aureum Project" class="project-image" data-project="aureum" data-index="0">
+										<div class="project-info">
+											<h3 class="project-title">Aureum</h3>
+											<p class="project-description">A stunning luxury home showcasing modern design and premium finishes.</p>
+											<div class="navigation-arrows">
+												<button class="nav-button" onclick="changeImage('aureum', -1)">← Previous</button>
+												<button class="nav-button" onclick="changeImage('aureum', 1)">Next →</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- Currawong Project -->
+									<div class="project-card">
+										<img src="images/Currawong2.jpg" alt="Currawong Project" class="project-image" data-project="currawong" data-index="0">
+										<div class="project-info">
+											<h3 class="project-title">Currawong</h3>
+											<p class="project-description">A beautiful family home designed for comfortable living.</p>
+											<div class="navigation-arrows">
+												<button class="nav-button" onclick="changeImage('currawong', -1)">← Previous</button>
+												<button class="nav-button" onclick="changeImage('currawong', 1)">Next →</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- Beauty Point Project -->
+									<div class="project-card">
+										<img src="images/Beauty Point 1.jpg" alt="Beauty Point Project" class="project-image" data-project="beautypoint" data-index="0">
+										<div class="project-info">
+											<h3 class="project-title">Beauty Point</h3>
+											<p class="project-description">A scenic waterfront home with breathtaking views.</p>
+											<div class="navigation-arrows">
+												<button class="nav-button" onclick="changeImage('beautypoint', -1)">← Previous</button>
+												<button class="nav-button" onclick="changeImage('beautypoint', 1)">Next →</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- Extensions Section -->
+						<section class="wrapper style2 portfolio-section">
+							<div class="inner">
+								<h2 class="major">Extensions</h2>
+								<p>Seamlessly expanding existing homes while maintaining architectural harmony and improving functionality.</p>
+								
+								<div class="project-grid">
+									<!-- Olive Street Project -->
+									<div class="project-card">
+										<img src="images/OliveStreet4.jpg" alt="Olive Street Extension" class="project-image" data-project="oliveStreet" data-index="0">
+										<div class="project-info">
+											<h3 class="project-title">Olive Street Extension</h3>
+											<p class="project-description">A thoughtful extension that enhances the original home's character.</p>
+											<div class="navigation-arrows">
+												<button class="nav-button" onclick="changeImage('oliveStreet', -1)">← Previous</button>
+												<button class="nav-button" onclick="changeImage('oliveStreet', 1)">Next →</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- Brougham Street Project -->
+									<div class="project-card">
+										<img src="images/Brougham Street1.jpg" alt="Brougham Street Extension" class="project-image" data-project="broughamStreet" data-index="0">
+										<div class="project-info">
+											<h3 class="project-title">Brougham Street Extension</h3>
+											<p class="project-description">A comprehensive renovation and extension project.</p>
+											<div class="navigation-arrows">
+												<button class="nav-button" onclick="changeImage('broughamStreet', -1)">← Previous</button>
+												<button class="nav-button" onclick="changeImage('broughamStreet', 1)">Next →</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- Renovations Section -->
+						<section class="wrapper style3 portfolio-section">
+							<div class="inner">
+								<h2 class="major">Renovations</h2>
+								<p>Transforming existing spaces with careful attention to detail and quality craftsmanship.</p>
+								
+								<div class="project-grid">
+									<!-- Prospect Bathroom Project -->
+									<div class="project-card">
+										<img src="images/ProspectBathroomBefore1.jpeg" alt="Prospect Bathroom Renovation" class="project-image" data-project="prospectBathroom" data-index="0">
+										<div class="project-info">
+											<h3 class="project-title">Prospect Bathroom Renovation</h3>
+											<p class="project-description">Complete bathroom transformation from dated to contemporary design.</p>
+											<div class="navigation-arrows">
+												<button class="nav-button" onclick="changeImage('prospectBathroom', -1)">← Previous</button>
+												<button class="nav-button" onclick="changeImage('prospectBathroom', 1)">Next →</button>
+											</div>
+										</div>
+									</div>
+
+									<!-- Trevallyne Bathroom Project -->
+									<div class="project-card">
+										<img src="images/TrevallynBathroomBefore1.jpeg" alt="Trevallyne Bathroom Renovation" class="project-image" data-project="trevallyneBathroom" data-index="0">
+										<div class="project-info">
+											<h3 class="project-title">Trevallyne Bathroom Renovation</h3>
+											<p class="project-description">Modern bathroom renovation with premium fixtures and finishes.</p>
+											<div class="navigation-arrows">
+												<button class="nav-button" onclick="changeImage('trevallyneBathroom', -1)">← Previous</button>
+												<button class="nav-button" onclick="changeImage('trevallyneBathroom', 1)">Next →</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Ready to start your project? Contact us today for a consultation.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Pure Design and Build<br />
+									Tasmania, Australia
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">info@puredesignandbuild.com.au</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Pure Design and Build. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+                    <div id="imageModal" class="modal">
+                        <span class="close-modal">&times;</span>
+                        <img class="modal-content" id="fullSizeImage">
+                        <div class="modal-nav">
+                            <button class="modal-arrow" id="prevModalImage">&larr;</button>
+                            <button class="modal-arrow" id="nextModalImage">&rarr;</button>
+                        </div>
+                    </div>
+
+			</div>
+
+        
+        <!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- Image gallery and modal functionality -->
+<script>
+  // Image arrays for each project
+  const projectImages = {
+    'aureum': [
+      'images/Aureum1.JPG',
+      'images/Aureum2.JPG',
+      'images/Aureum3.JPG',
+      'images/Aureum4.JPG',
+      'images/Aureum5.JPG',
+      'images/Aureum6.JPG',
+      'images/Aureum7.JPG',
+      'images/Aureum8.JPG'
+    ],
+    'currawong': [
+      'images/Currawong2.jpg',
+      'images/Currawong3.jpg',
+      'images/Currawong4.jpg',
+      'images/Currawong5.jpeg',
+      'images/Currawong6.jpeg',
+      'images/Currawong7.jpeg',
+      'images/Currawong8.jpeg',
+      'images/Currawong9.jpeg',
+      'images/Currawong10.jpeg'
+    ],
+    'beautypoint': [
+      'images/Beauty Point 1.jpg',
+      'images/Beauty Point 2.jpg',
+      'images/Beauty Point3.JPG',
+      'images/Beauty Point4.JPG'
+    ],
+    'oliveStreet': [
+      'images/OliveStreet4.jpg',
+      'images/OliveStreet2.jpg',
+      'images/OliveStreet3.jpg',
+      'images/OliveStreet5.jpeg',
+      'images/OliveStreet6.jpeg'
+    ],
+    'broughamStreet': [
+      'images/Brougham Street1.jpg',
+      'images/Brougham Street2.jpg',
+      'images/Brougham Street3.jpg',
+      'images/Brougham Street4.jpg',
+      'images/Brougham Street5.jpg'
+    ],
+    'prospectBathroom': [
+      'images/ProspectBathroomBefore1.jpeg',
+      'images/ProspectBathroomBefore2.jpeg',
+      'images/ProspectBathroomBefore3.jpeg',
+      'images/ProspectBathroomBefore4.jpeg',
+      'images/ProspectBathroomAfter1.jpeg',
+      'images/ProspectBathroomAfter2.jpeg',
+      'images/ProspectBathroomAfter3.jpeg',
+      'images/ProspectBathroomAfter4.jpeg',
+      'images/ProspectBathroomAfter5.jpeg'
+    ],
+    'trevallyneBathroom': [
+      'images/TrevallynBathroomBefore1.jpeg',
+      'images/TravallynBathroomBefore2.jpeg'
+    ]
+  };
+
+  // Current index for each project
+  const currentIndex = {
+    'aureum': 0,
+    'currawong': 0,
+    'beautypoint': 0,
+    'oliveStreet': 0,
+    'broughamStreet': 0,
+    'prospectBathroom': 0,
+    'trevallyneBathroom': 0
+  };
+
+  // Function to change the thumbnail image
+  function changeImage(project, direction) {
+    // Get the current index
+    let index = currentIndex[project];
+    
+    // Update the index
+    index += direction;
+    
+    // Handle wrap-around
+    const imageCount = projectImages[project].length;
+    if (index < 0) index = imageCount - 1;
+    if (index >= imageCount) index = 0;
+    
+    // Save the new index
+    currentIndex[project] = index;
+    
+    // Update the image
+    const imageElement = document.querySelector(`.project-image[data-project="${project}"]`);
+    imageElement.src = projectImages[project][index];
+    imageElement.setAttribute('data-index', index);
+  }
+  
+  // Keep track of which project is currently being viewed in modal
+  let currentModalProject = '';
+  
+  // Function to change the modal image
+  function changeModalImage(direction) {
+    if (!currentModalProject) return;
+    
+    // Get the current index
+    let index = currentIndex[currentModalProject];
+    
+    // Update the index
+    index += direction;
+    
+    // Handle wrap-around
+    const imageCount = projectImages[currentModalProject].length;
+    if (index < 0) index = imageCount - 1;
+    if (index >= imageCount) index = 0;
+    
+    // Save the new index
+    currentIndex[currentModalProject] = index;
+    
+    // Update the modal image
+    document.getElementById('fullSizeImage').src = projectImages[currentModalProject][index];
+    
+    // Also update the thumbnail
+    const imageElement = document.querySelector(`.project-image[data-project="${currentModalProject}"]`);
+    imageElement.src = projectImages[currentModalProject][index];
+    imageElement.setAttribute('data-index', index);
+  }
+  
+  // Function to open the modal
+  function openModal(project, index) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('fullSizeImage');
+    
+    // Set the image source
+    modalImg.src = projectImages[project][index];
+    
+    // Remember which project we're viewing
+    currentModalProject = project;
+    currentIndex[project] = index;
+    
+    // Display the modal
+    modal.style.display = 'flex';
+    
+    // Add keyboard navigation
+    document.addEventListener('keydown', handleKeyDown);
+  }
+  
+  // Function to close the modal
+  function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+    document.removeEventListener('keydown', handleKeyDown);
+  }
+  
+  // Keyboard navigation
+  function handleKeyDown(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+    } else if (e.key === 'ArrowLeft') {
+      changeModalImage(-1);
+    } else if (e.key === 'ArrowRight') {
+      changeModalImage(1);
+    }
+  }
+  
+  // Wait for the DOM to be fully loaded before adding event listeners
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add click events to all project images
+    document.querySelectorAll('.project-image').forEach(img => {
+      img.addEventListener('click', function() {
+        const project = this.getAttribute('data-project');
+        const index = parseInt(this.getAttribute('data-index'));
+        openModal(project, index);
+      });
+      // Make the cursor show it's clickable
+      img.style.cursor = 'pointer';
+    });
+    
+    // Set up navigation button events
+    document.getElementById('prevModalImage').addEventListener('click', function() {
+      changeModalImage(-1);
+    });
+    
+    document.getElementById('nextModalImage').addEventListener('click', function() {
+      changeModalImage(1);
+    });
+    
+    // Set up close button event
+    document.querySelector('.close-modal').addEventListener('click', function(e) {
+      e.stopPropagation();
+      closeModal();
+    });
+    
+    // Close modal when clicking the background
+    document.getElementById('imageModal').addEventListener('click', function(event) {
+      if (event.target === this) {
+        closeModal();
+      }
+    });
+  });
+</script>    
+
+	</body>
+</html>

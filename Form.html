@@ -6,11 +6,33 @@
 -->
 <html>
 	<head>
-		<title>Pure Design and Build</title>
+		<title>Inquiries - Pure Design and Build</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Logo styling improvements */
+			.logo {
+				margin-bottom: 2em !important;
+			}
+			
+			.logo img {
+				max-width: 150px !important;
+				height: auto !important;
+				border-radius: 10px;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				background: rgba(255, 255, 255, 0.1);
+				padding: 10px;
+				backdrop-filter: blur(5px);
+			}
+			
+			.logo img:hover {
+				transform: scale(1.05);
+				box-shadow: 0 6px 20px rgba(155, 241, 255, 0.4);
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -31,98 +53,135 @@
 							<h2>Menu</h2>
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
-								<li><a href="Form.html">Start a build</a></li>
+								<li><a href="AboutUs.html">About Us</a></li>
+								<li><a href="Portfolio.html">Portfolio</a></li>
+								<li><a href="Form.html">Inquiries</a></li>
 								
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
 					</nav>
 
-				<!-- Questions Wrapper -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Questions</h2>
-							<div class="questions-container">
-								<div class="question">
-									<label for="question1">Are you Planning to Renovate your kitchen?</label>
-									<input type="text" id="question1" name="question1">
-								</div>
-								<div class="question">
-									<label for="question2">are you planning to renovate your bathroom?</label>
-									<input type="text" id="question2" name="question2">
-								</div>
-								<div class="question">
-									<label for="question3">are you planning to renovate your living area?</label>
-									<input type="text" id="question3" name="question3">
-								</div>
-								<div class="question">
-									<label for="question1">Are you Planning to Renovate your Bedrooms?</label>
-									<input type="text" id="question4" name="question4">
-								</div>
-								<div class="question">
-									<label for="question2">are you planning to remove any walls?</label>
-									<input type="text" id="question5" name="question5">
-								</div>
-								<div class="question">
-									<label for="question3">What sort of finish are you after?</label>
-									<input type="text" id="question6" name="question6">
-								</div>
-								<div class="question">
-									<label for="question1">do you have plans already?</label>
-									<input type="text" id="question1" name="question1">
-								</div>
-								<div class="question">
-									<label for="question2">When are you wanting to start the renovation?</label>
-									<input type="text" id="question2" name="question2">
-								</div>
-								<div class="question">
-									<label for="question3">What is your estimated budget?</label>
-									<input type="text" id="question3" name="question3">
-								</div>
-								<div class="question">
-									<label for="question1">Let us know a little bit about this project</label>
-									<input type="text" id="question4" name="question4">
-								</div>
+				<!-- Banner -->
+				<section id="banner">
+					<div class="inner">
+						<div class="logo"><img src="images/ActualLogo.jpg" alt="Pure Design and Build Logo"></div>
+						<h2>Project Inquiry</h2>
+						<p>Tell us about your vision - we'd love to help bring it to life</p>
+					</div>
+				</section>
 
-								<section id="banner">									
-									<h2>Where Should We send the estimate?</h2>									
-								</section>
-								
-								<div class="question">
-									<label for="question2">first name</label>
-									<input type="text" id="question5" name="question5">
-								</div>            
-								<div class="question">
-									<label for="question3">last name</label>
-									<input type="text" id="question6" name="question6">
-								</div>
-								<div class="question">
-									<label for="question3">email</label>
-									<input type="text" id="question3" name="question3">
-								</div>
-								<div class="question">
-									<label for="question1">Phone</label>
-									<input type="text" id="question4" name="question4">
-								</div>
-								<div class="question">
-									<label for="question2">Address of proposed works</label>
-									<input type="text" id="question5" name="question5">
-								</div>
-								
+				<!-- Inquiry Form Wrapper -->
+					<section id="wrapper">
+						<section class="wrapper style1">
+							<div class="inner">
+								<div class="inquiry-container">
+								<form method="post" action="#" style="max-width: 600px; margin: 0 auto;">
+									<h3 style="margin-bottom: 1.5em; color: #9bf1ff;">Contact Details</h3>
+									
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name *</label>
+											<input type="text" name="name" id="name" required />
+										</div>
+										<div class="field half">
+											<label for="phone">Phone Number *</label>
+											<input type="tel" name="phone" id="phone" required />
+										</div>
+										<div class="field half">
+											<label for="email">Email *</label>
+											<input type="email" name="email" id="email" required />
+										</div>
+										<div class="field half">
+											<label for="location">Location (Suburb) *</label>
+											<input type="text" name="location" id="location" placeholder="e.g. Hobart" required />
+										</div>
+									</div>
+
+									<h3 style="margin: 2em 0 1.5em 0; color: #9bf1ff;">Project Details</h3>
+									
+									<div class="fields">
+										<div class="field">
+											<label for="projectType">What is your project type? *</label>
+											<select name="projectType" id="projectType" required>
+												<option value="">Please select...</option>
+												<option value="new-build">New Build</option>
+												<option value="extension">Extension</option>
+												<option value="renovation">Renovation</option>
+												<option value="other">Other</option>
+											</select>
+										</div>
+										
+										<div class="field">
+											<label for="plans">Do you have plans for your project?</label>
+											<select name="plans" id="plans">
+												<option value="">Please select...</option>
+												<option value="yes-complete">Yes - Complete plans</option>
+												<option value="yes-preliminary">Yes - Preliminary plans</option>
+												<option value="no-need-help">No - I need help with plans</option>
+												<option value="no-ideas-only">No - I have ideas only</option>
+											</select>
+										</div>
+										
+										<div class="field">
+											<label for="planAttachment">Upload Plans (if available)</label>
+											<input type="file" name="planAttachment" id="planAttachment" accept=".pdf,.jpg,.jpeg,.png,.dwg" />
+											<small style="color: #888;">Accepted formats: PDF, JPG, PNG, DWG</small>
+										</div>
+										
+										<div class="field">
+											<label for="budget">What is the budget for your project?</label>
+											<select name="budget" id="budget">
+												<option value="">Please select...</option>
+												<option value="under-50k">Under $50,000</option>
+												<option value="50k-100k">$50,000 - $100,000</option>
+												<option value="100k-200k">$100,000 - $200,000</option>
+												<option value="200k-300k">$200,000 - $300,000</option>
+												<option value="300k-500k">$300,000 - $500,000</option>
+												<option value="500k-plus">$500,000+</option>
+												<option value="discuss">Prefer to discuss</option>
+											</select>
+										</div>
+										
+										<div class="field">
+											<label for="projectDescription">Tell us about your project</label>
+											<textarea name="projectDescription" id="projectDescription" rows="6" placeholder="Please describe your vision, specific requirements, timeline, or any other details you'd like to share..."></textarea>
+										</div>
+									</div>
+									
+									<ul class="actions" style="text-align: center; margin-top: 2em;">
+										<li><input type="submit" value="Submit Inquiry" class="button special" /></li>
+									</ul>
+								</form>
 							</div>
-							 <ul class="actions">
-								<li><a href="#" class="button special">Submit</a></li>
 						</div>
 					</section>
+				</section>
 
-					<!-- Add this CSS to make the questions container scrollable -->
+					<!-- Add this CSS to make the form look professional -->
 					<style>
-						#questions .questions-container {
-							max-height: 300px; /* Adjust the height as needed */
-							overflow-y: auto;
+						.inquiry-container {
+							background: rgba(255,255,255,0.05);
+							padding: 2em;
+							border-radius: 5px;
+							margin-top: 2em;
 						}
-						.question {
-							margin-bottom: 15px;
+						.field {
+							margin-bottom: 1.5em;
+						}
+						.field.half {
+							width: 48%;
+							display: inline-block;
+							margin-right: 2%;
+						}
+						.field.half:nth-child(even) {
+							margin-right: 0;
+						}
+						@media (max-width: 768px) {
+							.field.half {
+								width: 100%;
+								margin-right: 0;
+							}
 						}
 					</style>
 
